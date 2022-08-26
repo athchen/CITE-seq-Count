@@ -70,7 +70,7 @@ def find_best_match_shift(TAG_seq, tags, maximum_distance):
     """
     best_match = "unmapped"
     best_score = maximum_distance
-    shifts = range(0, len(TAG_seq) - len(max(tags, key=len)))
+    shifts = range(0, len(TAG_seq) - len(max(tags, key=len)) + 1)
 
     for shift in shifts:
         for tag, name in tags.items():
